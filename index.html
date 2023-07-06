@@ -175,18 +175,32 @@
 </head>
 
 <body>
+	<script>
+		function check() {
+			var name = document.getElementById("name").value;
+			var pass = document.getElementById("pass").value;
+
+			if (name == "梦境" && pass == "123456" || name == "虎式" && pass == "123456" || name == "MSZ006" && pass == "123456" || name == "落宇" && pass == "123456" || name == "夜白" && pass == "123456" || name == "悠然" && pass == "123456") {
+				alert("登录成功！");
+				window.document.f.action = "test.html";
+				window.document.f.submit();
+			} else {
+				alert("用户名或密码错误！");
+			}
+		}
+	</script>
 	<div class="loginBox">
 		<h2>login</h2>
 		<form action="">
 			<div class="item">
-				<input type="text" required>
+				<input type="text" id="name" required>
 				<label for="">userName</label>
 			</div>
 			<div class="item">
-				<input type="password" required>
+				<input type="password" id="pass" required>
 				<label for="">password</label>
 			</div>
-			<button class="btn">submit
+			<button class="btn" onclick="check()">submit
 				<span></span>
 				<span></span>
 				<span></span>
@@ -195,4 +209,5 @@
 		</form>
 	</div>
 </body>
+
 </html>
