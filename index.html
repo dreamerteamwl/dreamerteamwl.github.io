@@ -1,213 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>欢迎来到Dreamer</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
+    </head>
+    <body data-smooth-scroll-offset="77">
+        <div class="nav-container"> </div>
+        <div class="main-container">
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-8">
+                            <article>
+                                <div class="article__title text-center">
+                                    <h1 class="h2">欢迎来到dreamer</h1> <span>2023/7/7</span> </div>
+                                <div class="article__body">
+                                    <p>dreamer——一个在病友交流会一次次撕裂中凝聚的团体</p>
+                                    <h5>起源</h5>
+                                    <p>22年末，一个叫夜歌的统治者第一次撕裂了他的团体——病友交流会，这次事件，就形成了第一代dreamer——梦境，而当病友交流会再次形成中，梦境已经不在其中，但病友交流会还依然不稳定，随时有可能被再次撕裂。</p>
+                                    <p>在此之后，又出现了四个dreamer。</p>
+                                    <ul class="bullets">
+                                        <li>二代梦境：曹子涵（虎式）</li>
+                                        <li>三代梦境：宋明宇（高达）</li>
+                                        <li>四代梦境：洛&nbsp; &nbsp; 宇（洛宇）</li>
+                                        <li>五代梦境：夜&nbsp; &nbsp; 白（夜白） &amp; 悠&nbsp; &nbsp; 然（悠然）</li>
+                                    </ul>
+                                </div>
+                                <div class="article__share text-center">
+                                    <a class="btn bg--twitter btn--icon" href="#"> <span class="btn__text">
+								<i class="socicon icon-Administrator"></i>
+								dreamer</span> </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts.js"></script>
 
-		a {
-			text-decoration: none;
-		}
-
-		input,
-		button {
-			background: transparent;
-			border: 0;
-			outline: none;
-		}
-
-		body {
-			height: 100vh;
-			background: linear-gradient(#141e30, #243b55);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 16px;
-			color: #03e9f4;
-		}
-
-		.loginBox {
-			width: 400px;
-			height: 364px;
-			background-color: #0c1622;
-			margin: 100px auto;
-			border-radius: 10px;
-			box-shadow: 0 15px 25px 0 rgba(0, 0, 0, .6);
-			padding: 40px;
-			box-sizing: border-box;
-		}
-
-		h2 {
-			text-align: center;
-			color: aliceblue;
-			margin-bottom: 30px;
-			font-family: 'Courier New', Courier, monospace;
-		}
-
-		.item {
-			height: 45px;
-			border-bottom: 1px solid #fff;
-			margin-bottom: 40px;
-			position: relative;
-		}
-
-		.item input {
-			width: 100%;
-			height: 100%;
-			color: #fff;
-			padding-top: 20px;
-			box-sizing: border-box;
-		}
-
-		.item input:focus+label,
-		.item input:valid+label {
-			top: 0px;
-			font-size: 2px;
-		}
-
-		.item label {
-			position: absolute;
-			left: 0;
-			top: 12px;
-			transition: all 0.5s linear;
-		}
-
-		.btn {
-			padding: 10px 20px;
-			margin-top: 30px;
-			color: #03e9f4;
-			position: relative;
-			overflow: hidden;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			left: 35%;
-		}
-
-		.btn:hover {
-			border-radius: 5px;
-			color: #fff;
-			background: #03e9f4;
-			box-shadow: 0 0 5px 0 #03e9f4,
-				0 0 25px 0 #03e9f4,
-				0 0 50px 0 #03e9f4,
-				0 0 100px 0 #03e9f4;
-			transition: all 1s linear;
-		}
-
-		.btn>span {
-			position: absolute;
-		}
-
-		.btn>span:nth-child(1) {
-			width: 100%;
-			height: 2px;
-			background: -webkit-linear-gradient(left, transparent, #03e9f4);
-			left: -100%;
-			top: 0px;
-			animation: line1 1s linear infinite;
-		}
-
-		@keyframes line1 {
-
-			50%,
-			100% {
-				left: 100%;
-			}
-		}
-
-		.btn>span:nth-child(2) {
-			width: 2px;
-			height: 100%;
-			background: -webkit-linear-gradient(top, transparent, #03e9f4);
-			right: 0px;
-			top: -100%;
-			animation: line2 1s 0.25s linear infinite;
-		}
-
-		@keyframes line2 {
-
-			50%,
-			100% {
-				top: 100%;
-			}
-		}
-
-		.btn>span:nth-child(3) {
-			width: 100%;
-			height: 2px;
-			background: -webkit-linear-gradient(left, #03e9f4, transparent);
-			left: 100%;
-			bottom: 0px;
-			animation: line3 1s 0.75s linear infinite;
-		}
-
-		@keyframes line3 {
-
-			50%,
-			100% {
-				left: -100%;
-			}
-		}
-
-		.btn>span:nth-child(4) {
-			width: 2px;
-			height: 100%;
-			background: -webkit-linear-gradient(top, transparent, #03e9f4);
-			left: 0px;
-			top: 100%;
-			animation: line4 1s 1s linear infinite;
-		}
-
-		@keyframes line4 {
-
-			50%,
-			100% {
-				top: -100%;
-			}
-		}
-	</style>
-</head>
-
-<body>
-	<script>
-		function check() {
-			var name = document.getElementById("name").value;
-			var pass = document.getElementById("pass").value;
-
-			if (name == "梦境" && pass == "123456" || name == "虎式" && pass == "123456" || name == "MSZ006" && pass == "123456" || name == "落宇" && pass == "123456" || name == "夜白" && pass == "123456" || name == "悠然" && pass == "123456") {
-				alert("登录成功！");
-				window.location.href = "https://dreamerteamwl.github.io/home";
-				alert("欢迎回来，dreamer");
-			} else {
-				alert("用户名或密码错误！");
-			}
-		}
-	</script>
-	<div class="loginBox">
-		<h2>login</h2>
-		<form action="">
-			<div class="item">
-				<input type="text" id="name" required>
-				<label for="">userName</label>
-			</div>
-			<div class="item">
-				<input type="password" id="pass" required>
-				<label for="">password</label>
-			</div>
-			<button class="btn" onclick="check()">submit
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-		</form>
-	</div>
-</body>
+    </body>
 
 </html>
